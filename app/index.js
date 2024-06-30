@@ -3,6 +3,7 @@ import { SafeAreaView, StyleSheet, Platform, StatusBar, } from "react-native";
 import FlexBox from './components/FlexBox';
 import Dimension from './components/Dimensions';
 import MyButton from './components/MyButton';
+import ItemListingScreen from './screens/ItemListingScreen';
 import ImageViewScreen from './screens/ImageViewScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 
@@ -16,11 +17,13 @@ export default function Index () {
       {/* dimensions */}
       {/* <Dimension /> */}
 
-      {/* <ImageViewScreen /> */}
+      <ImageViewScreen />
+      {/* <WelcomeScreen /> */}
+
+      {/* <ItemListingScreen /> */}
 
 
 
-      <WelcomeScreen />
 
     </SafeAreaView>
   );

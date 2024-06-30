@@ -1,5 +1,7 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+
 
 import colors from '../config/colors';
 import chair from '../assets/chair.jpg';
@@ -7,16 +9,17 @@ import chair from '../assets/chair.jpg';
 const ImageViewScreen = () => {
 	return (
 		<View style={styles.container}>
-			{/* <Text>Hi</Text> */}
-			<View style={{ ...styles.btn, ...styles.closeBtn }}></View>
-			<View style={{ ...styles.btn, ...styles.deleteBtn }}></View>
-			{/* <View style={styles.imgCon}> */}
+			<View style={[styles.btn, styles.closeBtn]}>
+				<MaterialCommunityIcons name="close" color="white" size={40} />
+			</View>
+			<View style={[styles.btn, styles.deleteBtn]}>
+				<MaterialCommunityIcons name="delete" color="white" size={40} />
+			</View>
 			<Image
 				resizeMode="contain"
 				style={styles.image}
 				source={chair}
 			/>
-			{/* </View> */}
 		</View>
 	);
 };
@@ -25,8 +28,8 @@ export default ImageViewScreen;
 
 const styles = StyleSheet.create({
 	btn: {
-		width: '30%',
-		height: 40,
+		// width: '30%',
+		// height: 40,
 		borderRadius: 8,
 		position: "absolute",
 		top: 40,
@@ -34,7 +37,6 @@ const styles = StyleSheet.create({
 	container: {
 		backgroundColor: colors.black,
 		flex: 1,
-		// borderColor: 'red',
 	},
 	closeBtn: {
 		left: 30,

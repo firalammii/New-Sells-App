@@ -1,13 +1,13 @@
-import { Pressable, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 import colors from '../config/colors';
 
 const MyButton = ({ title, onPress, color }) => {
 	return (
-		<Pressable style={{ ...styles.btn, backgroundColor: color ? colors[color] : colors.primary }}>
+		<TouchableOpacity style={{ ...styles.btn, backgroundColor: color ? colors[color] : colors.primary }} onPress={onPress}>
 			<Text style={styles.text}>{title}</Text>
-		</Pressable>
+		</TouchableOpacity>
 	);
 };
 
