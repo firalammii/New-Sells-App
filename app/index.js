@@ -1,11 +1,19 @@
 import { SafeAreaView, StyleSheet, Platform, StatusBar, } from "react-native";
 
-import FlexBox from './components/FlexBox';
-import Dimension from './components/Dimensions';
+import FlexBox from './practice/components/FlexBox';
+import Dimension from './practice/components/Dimensions';
+import ItemListingScreen from './practice/screens/ItemListingScreen';
+import MessagesScreen from './practice/screens/MessagesScreen';
 import MyButton from './components/MyButton';
-import ItemListingScreen from './screens/ItemListingScreen';
+import ProfileCard from './components/ProfileCard';
+import Icon from './components/Icon';
+import AccountCard from './components/AccountCard';
+import UsersListingScreen from './screens/UsersListingScreen';
 import ImageViewScreen from './screens/ImageViewScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
+import AccountScreen from './screens/AccountScreen';
+
+import colors from "./config/colors";
 
 export default function Index () {
   return (
@@ -17,10 +25,13 @@ export default function Index () {
       {/* dimensions */}
       {/* <Dimension /> */}
 
-      <ImageViewScreen />
-      {/* <WelcomeScreen /> */}
 
+      {/* <ImageViewScreen /> */}
+      {/* <WelcomeScreen /> */}
       {/* <ItemListingScreen /> */}
+      {/* <MessagesScreen /> */}
+      {/* <UsersListingScreen /> */}
+      <AccountScreen />
 
 
 

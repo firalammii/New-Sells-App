@@ -28,8 +28,6 @@ export default ImageViewScreen;
 
 const styles = StyleSheet.create({
 	btn: {
-		// width: '30%',
-		// height: 40,
 		borderRadius: 8,
 		position: "absolute",
 		top: 40,
