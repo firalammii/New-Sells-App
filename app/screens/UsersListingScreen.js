@@ -24,8 +24,8 @@ const UsersListingScreen = () => {
 			renderItem={({ item, index }) =>
 			(<ProfileCard
 				title={item.title}
-				img={item.img}
 				subTitle={item.subTitle}
+				img={item.img}
 				onPress={() => handleDelete(index)}
 				renderRightActions={() => <ListItemDeleteAction onPress={() => console.log("Delete Action")} />}
 			/>)

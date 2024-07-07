@@ -4,7 +4,7 @@ import React from 'react';
 import ItemSeparatorComp from "../../components/ItemSeparatorComp";
 import colors from '../../config/colors';
 import { items } from '../../config/data';
-import Card from '../components/Card';
+import Card from '../../components/ItemCard';
 
 
 const MessagesScreen = () => {

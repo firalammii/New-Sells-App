@@ -7,11 +7,11 @@ import MessagesScreen from './practice/screens/MessagesScreen';
 import MyButton from './components/MyButton';
 import ProfileCard from './components/ProfileCard';
 import Icon from './components/Icon';
-import AccountCard from './components/AccountCard';
 import UsersListingScreen from './screens/UsersListingScreen';
 import ImageViewScreen from './screens/ImageViewScreen';
 import WelcomeScreen from './screens/WelcomeScreen';
 import AccountScreen from './screens/AccountScreen';
+import ItemsListingScreen from './screens/ItemsListingScreen';
 
 import colors from "./config/colors";
 
@@ -25,13 +25,14 @@ export default function Index () {
       {/* dimensions */}
       {/* <Dimension /> */}
 
-
       {/* <ImageViewScreen /> */}
       {/* <WelcomeScreen /> */}
       {/* <ItemListingScreen /> */}
       {/* <MessagesScreen /> */}
       {/* <UsersListingScreen /> */}
-      <AccountScreen />
+      {/* <AccountScreen /> */}
+
+      <ItemsListingScreen />
 
 
 

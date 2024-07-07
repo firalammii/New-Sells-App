@@ -1,7 +1,7 @@
 import { StyleSheet, ScrollView } from 'react-native';
 import React from 'react';
 
-import Card from '../components/Card';
+import Card from '../../components/ItemCard';
 
 import colors from '../../config/colors';
 import { items } from '../../config/data';

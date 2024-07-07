@@ -6,6 +6,7 @@ import { Swipeable } from 'react-native-gesture-handler';
 import ListItemDeleteAction from './ListItemDeleteAction';
 
 const ProfileCard = ({
+	style,
 	img,
 	imgSize = 60,
 	ImageComponent,
@@ -17,6 +18,7 @@ const ProfileCard = ({
 		card: {
 			width: "100%",
 			height: imgSize,
+			padding: 10,
 			backgroundColor: colors.white,
 			flexDirection: "row",
 			alignItems: "center",
@@ -38,6 +40,7 @@ const ProfileCard = ({
 			fontSize: 15,
 		}
 	});
+
 	return (
 		<TouchableHighlight
 			underlayColor={colors.medium}

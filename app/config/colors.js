@@ -7,5 +7,5 @@ export default {
 	light: "#f8f4f4",
 	danger: "#ff1a1a",
 	gray: "#a2a2a2",
-	gold: "#fed256",
+	gold: "#ffe66d",
 };
