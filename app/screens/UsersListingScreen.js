@@ -1,7 +1,7 @@
 import { FlatList } from 'react-native';
 import React, { useState } from 'react';
 
-import ItemSeparatorComp from "../components/ItemSeparatorComp";
+import ItemSeparatorComp from "../components/ItemsListSeparator";
 import colors from '../config/colors';
 import ProfileCard from '../components/ProfileCard';
 import ListItemDeleteAction from '../components/ListItemDeleteAction';

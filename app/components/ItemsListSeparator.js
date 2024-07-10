@@ -1,15 +1,15 @@
 import { View } from 'react-native';
 import React from 'react';
 
-const ItemSeparatorComp = ({ color }) => {
+const ItemsListSeparator = ({ color = "grey", thickness = 1 }) => {
 	return (
 		<View style={{
 			width: "100%",
-			height: 1,
+			height: thickness,
 			backgroundColor: color,
 		}}>
 		</View>
 	);
 };
 
-export default ItemSeparatorComp;
+export default ItemsListSeparator;

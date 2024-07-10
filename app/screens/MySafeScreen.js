@@ -3,9 +3,9 @@ import { SafeAreaView, StyleSheet } from 'react-native';
 import constant from "expo-constants";
 import colors from '../config/colors';
 
-const MySafeScreen = ({ children }) => {
+const MySafeScreen = ({ children, style }) => {
 	return (
-		<SafeAreaView style={styles.safe_view}>
+		<SafeAreaView style={[styles.safe_view, style]}>
 			{
 				children
 			}
@@ -18,6 +18,6 @@ const styles = StyleSheet.create({
 	safe_view: {
 		flex: 1,
 		paddingTop: constant.statusBarHeight,
-		backgroundColor: colors.light,
+		// backgroundColor: colors.light,
 	}
 });

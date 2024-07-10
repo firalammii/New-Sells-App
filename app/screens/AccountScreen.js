@@ -7,7 +7,7 @@ import Icon from '../components/Icon';
 
 import colors from '../config/colors';
 import { menuItems } from '../config/data';
-import ItemSeparatorComp from '../components/ItemSeparatorComp';
+import ItemSeparatorComp from '../components/ItemsListSeparator';
 
 const AccountScreen = () => {
 	return (
