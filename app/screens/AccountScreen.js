@@ -13,44 +13,45 @@ const AccountScreen = () => {
 	return (
 		<MySafeScreen>
 			<View style={styles.container}>
-				<ProfileCard
-					title="Firomsa Bekele"
-					subTitle="firalammii@gmail.com"
-					img={require("../assets/FIRA_2024.jpg")}
-					imgSize={80}
-				/>
-				<FlatList
-					style={styles.menu}
-					data={menuItems}
-					keyExtractor={menuItem => menuItem.title}
-					ItemSeparatorComponent={ItemSeparatorComp}
-					renderItem={({ item }) => (
-						<ProfileCard
-							title={item.title}
-							ImageComponent={
-								<Icon
-									size={50}
-									icon_name={item.icon.icon_name}
-									icon_color={item.icon.icon_color}
-									bg_color={item.icon.bg_color}
-								/>
-							}
-						/>
-					)}
-				/>
-				<View style={styles.menu}>
+				<View style={styles.header}>
 					<ProfileCard
-						title="Log out"
-						ImageComponent={
-							<Icon
-								icon_name="logout"
-								size={50}
-								icon_color={colors.white}
-								bg_color={colors.gold}
-							/>
-						}
+						title="Firomsa Bekele"
+						subTitle="firalammii@gmail.com"
+						img={require("../assets/FIRA_2024.jpg")}
+						imgSize={80}
 					/>
 				</View>
+				<View style={styles.menu}>
+					<FlatList
+						data={menuItems}
+						keyExtractor={menuItem => menuItem.title}
+						ItemSeparatorComponent={<ItemSeparatorComp color={colors.light} />}
+						renderItem={({ item }) => (
+							<ProfileCard
+								title={item.title}
+								ImageComponent={
+									<Icon
+										size={50}
+										icon_name={item.icon.icon_name}
+										icon_color={item.icon.icon_color}
+										bg_color={item.icon.bg_color}
+									/>
+								}
+							/>
+						)}
+					/>
+				</View>
+				<ProfileCard
+					title={"Log Out"}
+					ImageComponent={
+						<Icon
+							size={50}
+							icon_name={"logout"}
+							icon_color={colors.white}
+							bg_color={colors.gold}
+						/>
+					}
+				/>
 			</View>
 		</MySafeScreen>
 	);
@@ -60,12 +61,20 @@ export default AccountScreen;
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: colors.light
+		flex: 1,
+		backgroundColor: colors.light,
+
+		// borderWidth: 1,
+		// borderColor: 'red'
+
+	},
+	header: {
+		marginBottom: 30,
 	},
 	menu: {
-		marginTop: 30,
+		marginBottom: 20,
 	},
-	logout: {
-		marginTop: 20,
-	}
+	// logout: {
+	// 	// marginTop: 20,
+	// }
 });

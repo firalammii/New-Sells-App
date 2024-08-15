@@ -4,13 +4,12 @@ import colors from '../config/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 const AppTextInput = ({
-	style,
+	name,
 	icon,
+	changeHandler,
+	style,
 	...otherProps
 }) => {
-
-	const [textValue, setTextValue] = useState("");
-
 
 	const styles = StyleSheet.create({
 		con: {
@@ -21,12 +20,9 @@ const AppTextInput = ({
 			paddingVertical: 5,
 
 			backgroundColor: colors.light,
-			borderRadius: icon ? icon.size + 45 : 45,
-			marginVertical: 10,
-
+			borderRadius: icon?.size ? icon.size + 45 : 45,
 			borderWidth: 1,
-			borderColor: colors.gray,
-
+			borderColor: colors.primary,
 		},
 		textInput: {
 			flex: 1,
@@ -46,8 +42,7 @@ const AppTextInput = ({
 				style={[styles.textInput, style]}
 				clearButtonMode="while-editing"
 				{...otherProps}
-				onChangeText={newValue => setTextValue(newValue)}
-
+				onChangeText={newValue => changeHandler(name, newValue)}
 			/>
 		</View>
 	);

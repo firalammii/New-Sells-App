@@ -17,6 +17,7 @@ const UsersListingScreen = () => {
 		items.splice(index, 1);
 		setMessages(items);
 	};
+
 	return (
 		<FlatList
 			data={messages}
@@ -26,10 +27,9 @@ const UsersListingScreen = () => {
 				title={item.title}
 				subTitle={item.subTitle}
 				img={item.img}
-				onPress={() => handleDelete(index)}
-				renderRightActions={() => <ListItemDeleteAction onPress={() => console.log("Delete Action")} />}
-			/>)
-			}
+				onPress={() => console.log("item pressed: ")}
+				renderRightAction={() => (<ListItemDeleteAction onPress={() => handleDelete(index)} />)}
+			/>)}
 			ItemSeparatorComponent={<ItemSeparatorComp color={colors.light} />}
 			refreshing={refresh}
 			onRefresh={() => setMessages(initMsgs)}

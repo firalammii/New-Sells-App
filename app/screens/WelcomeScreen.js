@@ -15,8 +15,10 @@ const WelcomeScreen = () => {
 					sell what you don't need
 				</Text>
 			</View>
+			<View style={styles.btns_con}>
 			<MyButton title="Login" onPress={() => console.log("Login btn")} />
 			<MyButton title="Log out" color="secondary" onPress={() => console.log("Log out btn")} />
+			</View>
 		</ImageBackground >
 	);
 };
@@ -28,6 +30,7 @@ const styles = StyleSheet.create({
 		flex: 1,
 		resizeMode: "cover",
 		justifyContent: "flex-end",
+		paddingBottom: 5
 
 	},
 	logo_con: {
@@ -52,5 +55,8 @@ const styles = StyleSheet.create({
 		textTransform: "capitalize",
 		marginTop: 20,
 
+	},
+	btns_con: {
+		rowGap: 5,
 	}
 });

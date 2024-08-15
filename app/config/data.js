@@ -13,6 +13,7 @@ export const initMsgs = [
 
 export const menuItems = [
 	{
+		id: 1,
 		title: "My Listings",
 		subTitle: "",
 		icon: {
@@ -22,6 +23,7 @@ export const menuItems = [
 		},
 	},
 	{
+		id: 2,
 		title: "My Account",
 		subTitle: "",
 		icon: {
@@ -30,4 +32,39 @@ export const menuItems = [
 			bg_color: colors.secondary,
 		},
 	},
+	// {
+	// 	id: 3,
+	// 	title: "Log out",
+	// 	subTitle: "",
+	// 	icon: {
+	// 		icon_name: "logout",
+	// 		icon_color: colors.white,
+	// 		bg_color: colors.gold,
+	// 	},
+	// },
+];
+
+export const appPickerOptions = [
+	{ id: 1, value: "Tea", selected: true, },
+	{ id: 2, value: "Ice Cream", selected: false, },
+	{ id: 3, value: "Coffee", selected: false, }
+];
+
+export const goods = [
+	{ id: 1, name: "Tea", category: 'hot drinks', },
+	{ id: 2, name: "Coffee", category: 'hot drinks', },
+	{ id: 3, name: "Chat", category: 'drugs', },
+	{ id: 4, name: "Besso", category: 'food', },
+	{ id: 5, name: "Tea", category: 'hot drinks', },
+	{ id: 6, name: "Coffee", category: 'hot drinks', },
+	{ id: 7, name: "Chat", category: 'drugs', },
+	{ id: 8, name: "Besso", category: 'food', },
+	{ id: 9, name: "Tea", category: 'hot drinks', },
+	{ id: 10, name: "Coffee", category: 'hot drinks', },
+	{ id: 11, name: "Chat", category: 'drugs', },
+	{ id: 12, name: "Besso", category: 'food', },
+	{ id: 13, name: "Coffee", category: 'hot drinks', },
+	{ id: 14, name: "Chat", category: 'drugs', },
+	{ id: 15, name: "Difo", category: 'food', },
+
 ];

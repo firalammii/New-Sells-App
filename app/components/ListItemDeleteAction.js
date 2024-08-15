@@ -18,7 +18,7 @@ export default ListItemDeleteAction;
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: colors.danger,
-		// width: "100%",
 		alignItems: "center",
+		justifyContent: "center",
 	}
 });

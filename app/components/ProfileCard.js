@@ -3,7 +3,6 @@ import React from 'react';
 
 import colors from '../config/colors';
 import { Swipeable } from 'react-native-gesture-handler';
-import ListItemDeleteAction from './ListItemDeleteAction';
 
 const ProfileCard = ({
 	style,
@@ -12,17 +11,19 @@ const ProfileCard = ({
 	ImageComponent,
 	title,
 	subTitle,
-	onPress
+	onPress,
+	renderRightAction,
 }) => {
 	const styles = StyleSheet.create({
 		card: {
 			width: "100%",
-			height: imgSize,
-			padding: 10,
+			// height: imgSize,
+			padding: 15,
 			backgroundColor: colors.white,
 			flexDirection: "row",
 			alignItems: "center",
 			gap: 20,
+			...style
 
 		},
 		item_img: {
@@ -42,10 +43,13 @@ const ProfileCard = ({
 	});
 
 	return (
+		<Swipeable
+			renderRightActions={renderRightAction}
+		>
 		<TouchableHighlight
 			underlayColor={colors.medium}
 			onPress={onPress}
-		>
+			>
 			<View style={styles.card}>
 				{img ? <Image style={styles.item_img} source={img} /> : ImageComponent}
 				<View>
@@ -54,6 +58,7 @@ const ProfileCard = ({
 				</View>
 			</View>
 		</TouchableHighlight>
+		</Swipeable>
 	);
 };
 
